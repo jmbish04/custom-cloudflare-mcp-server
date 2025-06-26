@@ -4,4 +4,3 @@ export { CloudflareWorker } from './cloudflare-worker';
 export { MCPDurableObject } from './mcp-durable';
 export { MyMCP as MemoryAgent } from './mcp'; // Export MyMCP as MemoryAgent for clarity
 export default app;
-export default app;
