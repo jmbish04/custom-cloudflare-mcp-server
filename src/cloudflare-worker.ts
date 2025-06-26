@@ -547,11 +547,8 @@ export class CloudflareWorker extends WorkerEntrypoint<Env> {
 		// Parse the JSON strings to get the actual objects
 		const parsedAcks = JSON.parse(acks) as Array<{ lease_id: string }>
 		const parsedRetries = retries
-			? (JSON.parse(retries) as Array<{
-					lease_id: string
-					delay_seconds?: number
-				}>)
-			: undefined
+    const parsedRetries = retries
+      ? (JSON.parse(retries) as Array<{
 
 		return await acknowledgeMessages(
 			this.env,
