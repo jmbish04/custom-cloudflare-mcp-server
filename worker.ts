@@ -1,4 +1,4 @@
-import { TaskManagerServer } from "./index.js";
+import { TaskManagerServer } from "./src/task-manager.js";
 import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
