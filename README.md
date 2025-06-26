@@ -1,6 +1,16 @@
-# Building a Remote MCP Server on Cloudflare (Without Auth)
+# Comprehensive Cloudflare MCP Server
 
-This example allows you to deploy a remote MCP server that doesn't require authentication on Cloudflare Workers. 
+This example builds upon the standard authless server and integrates features from several demo libraries to create a more capable MCP server running on Cloudflare Workers.
+
+Integrated demos:
+
+- **cloudflare-api-mcp** – example Cloudflare API access
+- **mcp-memory** – simple in-memory storage
+- **cf-mcp-durable-object** – stub durable object interface
+- **cloudflare-browser-rendering** – page rendering demo
+- **google-mcp-remote** – simulated Google search
+- **mcp-space** – basic space management
+- **mcp-taskmanager** – basic task tracking
 
 ## Get started: 
 
@@ -15,7 +25,7 @@ npm create cloudflare@latest -- my-mcp-server --template=cloudflare/ai/demos/rem
 
 ## Customizing your MCP Server
 
-To add your own [tools](https://developers.cloudflare.com/agents/model-context-protocol/tools/) to the MCP server, define each tool inside the `init()` method of `src/index.ts` using `this.server.tool(...)`. 
+The `src/index.ts` file already includes examples from the demo libraries listed above. To add your own [tools](https://developers.cloudflare.com/agents/model-context-protocol/tools/) simply extend the `init()` method and call `this.server.tool(...)` for each new capability.
 
 ## Connect to Cloudflare AI Playground
 
